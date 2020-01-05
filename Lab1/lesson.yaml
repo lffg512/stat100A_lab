@@ -9,8 +9,8 @@
 - Class: text
   Output: Welcome to Lab 1, Data Basics!
 
-- Class: mult_question
-  Output: Lab 1, July 29. Is this the correct lab? You must complete the lab for today's date.
+- Class: mule_question
+  Output: Lab 1 Week 1. Is this the correct lab? You must complete the lab for the correct week. 
   CorrectAnswer: yes
   AnswerChoices: yes; no
   AnswerTests: omnitest(correctVal='yes')

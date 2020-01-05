@@ -10,7 +10,7 @@
   Output: Welcome to Lab 2, Sampling Principles, Experiments, and Numerical Data!
 
 - Class: mult_question
-  Output: Lab 2, July 31. Is this the correct lab? You must complete the lab for today's date.
+  Output: Lab 2. Is this the correct lab? You must complete the correct one.
   CorrectAnswer: yes
   AnswerChoices: yes; no
   AnswerTests: omnitest(correctVal='yes')

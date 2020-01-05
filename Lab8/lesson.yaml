@@ -7,7 +7,7 @@
   Version: 2.4.4
 
 - Class: mult_question
-  Output: Lab 8, August 21. Is this the correct lab? You must complete the lab for today's date.
+  Output: Lab 8. Is this the correct lab? You must complete the correct one.
   CorrectAnswer: yes
   AnswerChoices: yes; no
   AnswerTests: omnitest(correctVal='yes')
