@@ -236,10 +236,9 @@
   Output: Good job! Now it's time to play with R on your own.
 
 # calculation
-- Class: mult_question
-  Output: Suppose you went grocery shopping and need to buy milk ($3.5), bread ($2), eggs ($1.7), bottled water ($5 + $1.2 CRV) and a bunch of flowers to decorate your room ($9). You also need to pay 9.25% tax on the flowers. How much money will you spend in total?
+- Class: exact_question
+  Output: Suppose you went grocery shopping and bought milk ($3.5), bread ($2), eggs ($1.7), bottled water ($5 + $1.2 CRV) and a bunch of flowers to decorate your room ($9). You also need to pay 9.25% tax on the flowers. Calculate how much money did you spend in total?
   CorrectAnswer: no association
-  AnswerChoices: 22.4; 24.472; 23.2325
   AnswerTests: omnitest(correctVal='23.2325')
   Hint: Did you include CRV and tax for flowers?
 # save the result as a variable
@@ -250,32 +249,32 @@
   Hint: We can assign values of 12 to variable x by "x <- 12"?
 
 - Class: cmd_question
-  Output: Now we want to see what R has stored in tax_rate. What you need to type get this information?
+  Output: Now we want to see what R has stored in tax_rate. What you need to type to get this information?
   CorrectAnswer: tax_rate
   AnswerTests: omnitest(correctExpr='tax_rate')
   Hint: Type tax_rate and press Enter. This will automatically print the value of tax_rate.
 
 # dataset
 - Class: cmd_question
-  Output: Let's look at one of R's many built in data sets, "Titanic". Now, let's load the data set into R's environment.
+  Output: Let's look at one of R's many built in data sets, "Titanic". Now, let's load the dataset into R's environment.
   CorrectAnswer: data(Titanic)
-  AnswerTests: omnitest(correctExpr='data(Titanic)')
-  Hint: In previous exercises, you typed data(mtcars) to load the data set of mtcars. the dataset name is case sensitive.
+  AnswerTests: any_of_exprs('data(Titanic)', 'data("Titanic")')
+  Hint: In previous exercises, you typed data(mtcars) to load the data set of mtcars. The dataset name is case sensitive.
 # help function
 - Class: cmd_question
   Output: We want to know more about this datafile. How could you bring out the help file for this dataset?
   CorrectAnswer: ?Titanic
-  AnswerTests: omnitest(correctVal='?Titanic')
+  AnswerTests: omnitest(correctExpr='?Titanic')
   Hint: Recall that you used "?mtcars" to bring out the help file for mtcars dataset.
 
 - Class: mult_question
-  Output: What type of variable is "Age"?
+  Output: Use the information in the help file of Titanic dataset. What type of variable is "Age"?
   AnswerChoices:  A discrete numerical variable; A Continuous numerical variable; A categorical variable
   AnswerTests: omnitest(correctVal='A categorical variable')
   Hint: What are the values for variable Age?
 
 - Class: mult_question
-  Output: What type of variable is "Class"?
+  Output: Use the information in the help file of Titanic dataset. What type of variable is "Class"?
   AnswerChoices:  A discrete numerical variable; A continuous numerical variable; A categorical variable
   AnswerTests: omnitest(correctVal='A categorical variable')
   Hint: Does the number "1" in class 1 means a quantity?
