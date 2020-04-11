@@ -269,12 +269,14 @@
 
 - Class: mult_question
   Output: Use the information in the help file of Titanic dataset. What type of variable is "Age"?
+  CorrectAnswer: A categorical variable
   AnswerChoices:  A discrete numerical variable; A Continuous numerical variable; A categorical variable
   AnswerTests: omnitest(correctVal='A categorical variable')
   Hint: What are the values for variable Age?
 
 - Class: mult_question
   Output: Use the information in the help file of Titanic dataset. What type of variable is "Class"?
+  CorrectAnswer: A categorical variable
   AnswerChoices:  A discrete numerical variable; A continuous numerical variable; A categorical variable
   AnswerTests: omnitest(correctVal='A categorical variable')
   Hint: Does the number "1" in class 1 means a quantity?
