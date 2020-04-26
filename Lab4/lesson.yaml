@@ -56,7 +56,7 @@
   Output: Find P(J | PB). Recall that 80% of people like peanut butter, 89% like jelly, and 78%
     like both.
   CorrectAnswer: 0.78 / 0.80
-  AnswerTests: omnitest(any_of_exprs('0.975', '0.78 / 0.80', '0.78 / 0.8'))
+  AnswerTests: calculates_same_value(0.78 / 0.80)
   Hint: It may be helpful to write the information from the problem statement in probability notation.
     For example, P(PB and J) = P(both) = 0.78
 
@@ -98,21 +98,21 @@
 
 - Class: cmd_question
   Output: Let's start by calculating P(A and B) = P(A | B)P(B). Find this value now.
-  CorrectAnswer: 0.86 x 0.80
-  AnswerTests: omnitest(correctVal=0.86*0.80)
+  CorrectAnswer: 0.86 * 0.80
+  AnswerTests: calculates_same_value(0.86 * 0.80)
   Hint: Look back to where we wrote our information out in probability notation.
 
 - Class: cmd_question
   Output: Now we want to calculate P(A). Find this value now.
-  CorrectAnswer: 0.80 × 0.86 + 0.20 × 0.65
-  AnswerTests: omnitest(correctVal=0.80*0.86 + 0.20*0.65)
+  CorrectAnswer: 0.80 * 0.86 + 0.20 * 0.65
+  AnswerTests: calculates_same_value(0.80 * 0.86 + 0.20 * 0.65)
   Hint: Use the Law of Total Probability to calculate P(A). Remember that this is the sum of
     all of the joint probabilities where A occurs.
 
 - Class: cmd_question
   Output: Use these calculations to find P(B | A). Round your answer to 3 decimal places.
   CorrectAnswer: 0.841
-  AnswerTests: omnitest(correctVal=0.841)
+  AnswerTests: calculates_same_value(0.841)
   Hint: Plug your calculations back into Bayes Theorem. Then carefully round to 3 decimal places.
 
 - Class: text
@@ -123,8 +123,8 @@
 - Class: cmd_question
   Output: What is the probability that the first two people share a birthday? Enter your answer
     as a fraction.
-  CorrectAnswer: (365/365) x (1/365) = 1/365
-  AnswerTests: omnitest(correctVal=1/365)
+  CorrectAnswer: (365/365) * (1/365)
+  AnswerTests: calculates_same_value(1/365)
   Hint: The first person's birthday can be any day of the year. Then the second person's birthday must
     be on the specific day that the fist person's birthday falls on. What is the probability that
     person 2's birthday is on a specific day?
@@ -132,8 +132,8 @@
 - Class: cmd_question
   Output: What is the probability that at least two of the three people share a birthday? Round to 3
     decimal places.
-  CorrectAnswer: 1 - (365/365)x(364/365)x(363/365) = 0.008
-  AnswerTests: omnitest(correctVal=0.008)
+  CorrectAnswer: 1 - (365/365) * (364/365) * (363/365)
+  AnswerTests: calculates_same_value(0.008)
   Hint: It may be easier to think of the probability that none of the people share a birthday and take
     the complement. Note that if my birthday is April 11, there is a 364/365 chance that you and I do
     not share a birthday.
@@ -158,21 +158,21 @@
 
 - Class: cmd_question
   Output: Compute the average revenue per passenger.
-  CorrectAnswer: 0.54 x 0 + 0.34 x 25 + 0.12 x 60 = 15.7
-  AnswerTests: omnitest(correctVal=15.7)
+  CorrectAnswer: 0.54 * 0 + 0.34 * 25 + 0.12 * 60
+  AnswerTests: calculates_same_value(15.7)
   Hint: Double check the expected value formula from Section 3.4 or from the Aug 6 course notes.
 
 - Class: cmd_question
   Output: Find the variance of the revenue per passenger.
-  CorrectAnswer: 0.54 x (0-15.7)^2 + 0.34 x (25-15.7)^2 + 0.12 x (60-15.7)^2 = 398.01
-  AnswerTests: omnitest(correctVal=398.01)
+  CorrectAnswer: 0.54 * (0-15.7)^2 + 0.34 * (25-15.7)^2 + 0.12 * (60-15.7)^2 # = 398.01
+  AnswerTests: calculates_same_value(398.01)
   Hint: Double check the variance formula from Section 3.4 or from the Aug 6 course notes.
 
 - Class: cmd_question
   Output: Find the standard deviation of the revenue per passenger. Since these quantities are in
     dollars, round your answer to 2 decimal places.
   CorrectAnswer: sqrt(398.01) = 19.95
-  AnswerTests: omnitest(correctVal=19.95)
+  AnswerTests: calculates_same_value(19.95)
   Hint: The standard deviation is the square root of the variance. Remember to round to 2 decimal
     places.
 
@@ -206,30 +206,30 @@
 - Class: cmd_question
   Output: What is the probability that a randomly chosen US resident makes less than $50,000
     per year?
-  CorrectAnswer: 0.212 + 0.183 + 0.158 + 0.047 + 0.022 = 0.622
-  AnswerTests: omnitest(correctVal=0.622)
+  CorrectAnswer: 0.212 + 0.183 + 0.158 + 0.047 + 0.022 # = 0.622
+  AnswerTests: calculates_same_value(0.622)
   Hint: We want to include everyone who makes less than $50,000.
 
 - Class: text
   Output: -------------Counting Techniques ----------------
 
 - Class: text
-  Output: Today we will not talk about probabilities or distributions. Let's just start by playing with the following questions.
+  Output: Now Let's play with the following questions related to combination and permutation.
 
 
 - Class: cmd_question
-  Output: -- Question for you --How many unique ways are there to arrange the letters in the word HEY?
+  Output: -- Question for you -- How many unique ways are there to arrange the letters in the word HEY?
   CorrectAnswer: There are 3 letters to choose for the first position, 2 for the second position and so on,  So  3 x 2 x 1 = 3 ! (this is called 3 fatorial) = 6.
-  AnswerTests: omnitest(correctVal=6)
+  AnswerTests: calculates_same_value(6)
   Hint: Let me give you some hint. Starting from the first position, how many letters can you choose from? You can also try to write down all the possible choices since we are only dealing with 3 letters.
 
 - Class: text
   Output: The way I solve it is like this. There are 3 choices for the first position, 2 choices for the second position and 1 choice for the last. So 3 x 2 x 1 = 6.
 
 - Class: cmd_question
-  Output: -- Question for you --How many unique ways are there to arrange the letters in the word DAISY?
+  Output: -- Question for you -- How many unique ways are there to arrange the letters in the word DAISY?
   CorrectAnswer: There are 5 choices for the first position, 4 choices for the second position and so on,  So 5 x 4 x 3 x 2 x 1 = 5 ! (this is called 5 factorial) = 120.
-  AnswerTests: omnitest(correctVal=120)
+  AnswerTests: calculates_same_value(120)
   Hint: Let me give you some hint.How many different choices (letters) you have to put on the first position, then second, then thid?
 
 
@@ -241,7 +241,7 @@
 - Class: cmd_question
   Output: -- Question for you -- You just got a free ticket for a boat ride, and you can bring along 2 friends! Unfortunately, you have 5 friends who want to come along. How many different groups of friends could you take with you?
   CorrectAnswer: There are 5 choices for the first person you bring along, 4 choices for the second position. Because the order doesn’t matter and there are 2 different ways to order 2 people.  So 5 x 4/ 2 = 10
-  AnswerTests: omnitest(correctVal=10)
+  AnswerTests: calculates_same_value(10)
   Hint: Let me give you some hint. How many different choices you have when choosing the first person, then the second? Does the order matter?
 
 
@@ -252,7 +252,7 @@
   Output: -- Question for you -- Stephanie is packing her bags for her vacation. She has 7 unique books, but only 3 fit in her bag. How many different groups of books can she take?
 
   CorrectAnswer: There are 7 choices for the first book you bring along, 6 choices for the second position and 5 choices for the third.  Because the order doesn’t matter and there are 3 x 2 x 1 different ways to order 2 people.  So 7 x 6 x 5 / (3 x 2 x 1) = 35.
-  AnswerTests: omnitest(correctVal=35)
+  AnswerTests: calculates_same_value(35)
   Hint: Let me give you some hint. How many different choices you have when choosing the first person, then the second, the third? Does the order matter?
 
 - Class: text
@@ -262,7 +262,7 @@
 - Class: cmd_question
   Output: -- Question for you -- You just got a free ticket for a boat ride, and you can bring along 3 friends! Unfortunately, you have 5 friends who want to come along. How many different groups of friends could you take with you?
   CorrectAnswer: There are 5 choices for the first person you bring along, 4 choices for the second position. Because the order doesn’t matter and there are 3 x 2  different ways to order 3 people.  So 5 x 4 x 3 / 3 x 2 = 10
-  AnswerTests: omnitest(correctVal=10)
+  AnswerTests: calculates_same_value(10)
   Hint: Let me give you some hint. How many different choices you have when choosing the first person, then the second then the third? Does the order matter?
 
 
@@ -270,9 +270,9 @@
   Output: The way I solve it is like this. Since we already calculated 5 choose 2 people in the previous question. Choose 3 people and 2 left should have the same number of possible results as choose 2 people and 3 left. So the answer is still 10.
 
 - Class: cmd_question
-  Output: -- Question for you -- There are 10 basketball teams made to final round and only first and second place will get a medal. How many possible results this game could have?
+  Output: -- Question for you -- There are 10 basketball teams made to final round and only first and second place will get a medal. How many possible results could we have for first and second place?
   CorrectAnswer: One of the 10 teams can be the first place, then one of the 9 teams left can be the second place. Note the order does matter here, since we are talking about first and second place, So 10 x 9 = 90.
-  AnswerTests: omnitest(correctVal=90)
+  AnswerTests: calculates_same_value(90)
   Hint: Let me give you some hint. First, think about the first place. How many teams could end up first? With the first place determined, then how many could end up 2nd? Does the order matter?
 
 
@@ -282,7 +282,7 @@
 - Class: cmd_question
   Output: -- Question for you -- There are 10 basketball players and the coach need to pick 5 to make a team. How many different teams could be made?
   CorrectAnswer: When the coach pick the first player for the team, there are 10 choices. Then 9 choices for the second player, and so on. But we only care about who is in team, the order they were picked doesn’t matter. For the same group of 5 players, there are 5 x 4 x 3 x 2 x 1 = 5!  = 120 ways to order them but it’s the same team after all.  So 10 x 9 x 8 x 7 x 6 / 5! = 252
-  AnswerTests: omnitest(correctVal=252)
+  AnswerTests: calculates_same_value(252)
   Hint: Let me give you some hint. Do you think this is 10 choose 5  or the order of players get picked matter?
 
 
@@ -293,7 +293,7 @@
   Output: Note that it gets messy when we did 10 choose 5 in the previous questions. Your calculation is 10 x 9 x 8 x 7 x 6 / 5!. What if we need to to 100 choose 24? Do you want to type the whole calculationin 100 x 99 x 98 x 97 x .... / 24!? Is there an easier way to do it?
 
 - Class: cmd_question
-  Output: In its most basic form, R is just a big calculator! We know 3 factorial is 3 x 2 x 1 = 6. Try 'factorial(3)' and see if you get 6.
+  Output: In its most basic form, R is just a big calculator! We know 3 factorial is 3 x 2 x 1 = 6. Try to type factorial(3) and see if you get 6.
     and press Enter.
   CorrectAnswer: factorial(3)
   AnswerTests: omnitest(correctExpr='factorial(3)')
@@ -303,9 +303,9 @@
   Output: Now can we rewrite this expression 10 x 9 x 8 x 7 x 6 / 5!  using factorial?
 
 - Class: cmd_question
-  Output: How about (10!/5!) / 5!. Try to type  ‘factorial(10)/ factorial(5) / factorial(5)’.
+  Output: How about (10!/5!) / 5!. Try to type factorial(10)/ factorial(5) / factorial(5).
   CorrectAnswer: factorial(10)/ factorial(5) / factorial(5)
-  AnswerTests: omnitest(correctVal=252)
+  AnswerTests: calculates_same_value(252)
   Hint: Type ‘factorial(10)/ factorial(5) / factorial(5) ‘
 
 
