@@ -172,26 +172,26 @@
 - Class: cmd_question
   Output: We can use alpha/2 to find the critical value. Use the qnorm function with your value for alpha/2
     to find the negative version of our critical value z.
-  CorrectAnswer: qnorm(0.05/2) = -1.96
+  CorrectAnswer: qnorm(0.05/2)
   AnswerTests: calculates_same_value(qnorm(0.025))
   Hint: Use qnorm(a/2), replacing a with the value of alpha.
 
 - Class: cmd_question
   Output: Calculate the margin of error for this confidence interval. Round your answer to three decimal
     places.
-  CorrectAnswer: 1.96 * 0.0173 = 0.034
+  CorrectAnswer: 1.96 * 0.0173
   AnswerTests: calculates_same_value(0.034)
   Hint: Recall we calculated the standard error above. What's our formula for margin of error?
 
 - Class: cmd_question
   Output: Use your margin of error to find the lower bound for the 99% confidence interval.
-  CorrectAnswer: 0.235 - 0.034 = 0.201
+  CorrectAnswer: 0.235 - 0.034
   AnswerTests: calculates_same_value(0.201)
   Hint: The lower bound will be point estimate - margin of error.
 
 - Class: cmd_question
   Output: Use your margin of error to find the upper bound for the 99% confidence interval.
-  CorrectAnswer: 0.235 + 0.034 = 0.269
+  CorrectAnswer: 0.235 + 0.034
   AnswerTests: calculates_same_value(0.269)
   Hint: The lower bound will be point estimate + margin of error.
 #
@@ -247,7 +247,7 @@
     because they had received a coupon in the mail is NOT 25%?
   CorrectAnswer: Unknown, we cannot use this confidence interval to test at this level of significance.
   AnswerChoices: No, 0.25 is in the interval.; Yes, 0.25 is in the interval.; Unknown, we need to calculate the 90% confidence interval first.
-  AnswerTests: omnitest(correctVal='Unknown, we cannot use this confidence interval to test at this level of significance.')
+  AnswerTests: omnitest(correctVal='Unknown, we need to calculate the 90% confidence interval first.')
   Hint: What happens to our interval if we increase our significance level? How do we interpret a
     confidence interval?
 
