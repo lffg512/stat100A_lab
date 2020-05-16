@@ -299,7 +299,7 @@
   Hint: z = (x - mu)/sigma
 
 - Class: text
-  Output: You can see, with 4 standard deviation away, 95 is an extremely high temperature. Using the assumed normal distribution, there is only a 3 in 100,000 chance to observe a temperature this high. 
+  Output: You can see, with 4 standard deviation away, 95 is an extremely high temperature. Using the assumed normal distribution, there is only a 3 in 100,000 chance to observe a temperature this high.
 
 - Class: text
   Output: You have successfully completed Lab 5! Way to go!
