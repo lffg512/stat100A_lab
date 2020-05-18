@@ -184,13 +184,13 @@
   Hint: Recall we calculated the standard error above. What's our formula for margin of error?
 
 - Class: cmd_question
-  Output: Use your margin of error to find the lower bound for the 99% confidence interval.
+  Output: Use your margin of error to find the lower bound for the 95% confidence interval.
   CorrectAnswer: 0.235 - 0.034
   AnswerTests: calculates_same_value(0.201)
   Hint: The lower bound will be point estimate - margin of error.
 
 - Class: cmd_question
-  Output: Use your margin of error to find the upper bound for the 99% confidence interval.
+  Output: Use your margin of error to find the upper bound for the 95% confidence interval.
   CorrectAnswer: 0.235 + 0.034
   AnswerTests: calculates_same_value(0.269)
   Hint: The lower bound will be point estimate + margin of error.
