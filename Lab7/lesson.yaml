@@ -203,8 +203,8 @@
 
 - Class: cmd_question
   Output: What is the standard error for the sample proportion p-hat?
-  CorrectAnswer: sqrt(0.61 * 0.39/1578)
-  AnswerTests: calculates_same_value(sqrt(0.61 * 0.39/1578))
+  CorrectAnswer: sqrt(0.5 * 0.5/1578)
+  AnswerTests: calculates_same_value(sqrt(0.5 * 0.5/1578))
   Hint: Use the formula for SE of p-hat, sqrt(p x (1-p)/n)
 
 
